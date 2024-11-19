@@ -34,7 +34,7 @@ for i in animation_routine['frames']:
     image = Image.open(i['path'])
     # Make image fit our screen.
     image.thumbnail((matrix.width, matrix.height), Image.LANCZOS)
-    frames.append({'image' : image.convert('RGB'), 'time' : i['time']})
+    frames.append({'image' : image.convert('RGB'), 'time' : int(i['time'])})
                   
 while True:
     for i in frames:
