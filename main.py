@@ -23,8 +23,8 @@ options.cols = 64
 options.chain_length = 1
 options.parallel = 1
 options.gpio_slowdown = 4
-options.brightness=75
-options.hardware_mapping = 'adafruit-hat'  # If you have an Adafruit HAT: 'adafruit-hat'
+options.brightness=50
+options.hardware_mapping = 'adafruit-hat-pwm'  # If you have an Adafruit HAT: 'adafruit-hat'
 
 matrix = RGBMatrix(options = options)
 
@@ -33,7 +33,7 @@ frames = []
 for i in animation_routine['frames']:
     image = Image.open(i['path'])
     # Make image fit our screen.
-    image.thumbnail((matrix.width, matrix.height), Image.LANCZOS)
+    image.thumbnail((matrix.width, matrix.height), Image.NEAREST)
     frames.append({'image' : image.convert('RGB'), 'time' : int(i['time'])})
                   
 while True:
