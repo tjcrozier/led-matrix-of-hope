@@ -4,8 +4,19 @@ import json
 import sys
 import time
 #to do: 
-# 1. create switch that shows ip address for ssh
-# 2. setup animation (maybe just an mp4) 
+# 1. set up auto network connection (prob need euid for this)
+# 2. solder button for turning it off
+# 3. designing a 3d printed plate to mount the pi and potentially act as a stand
+# 4. get qr code for linktree/discord/whatever and making headings for them to pop up
+# 5. SET UP SYSTEMD AUTO START
+
+#stretch goals:
+# 1. transitions (fading, sliding, etc)
+# 2. video support?
+# 3. implement fast api or similar for easier access
+# 4. extend routine.json for transition data/other?
+
+
 
 
 if len(sys.argv) < 2:
